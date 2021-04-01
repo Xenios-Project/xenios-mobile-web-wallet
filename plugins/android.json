@@ -39,6 +39,12 @@
     },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-sslcertificatechecker": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-privacyscreen": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
     }
   },
   "dependent_plugins": {}

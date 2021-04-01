@@ -35,6 +35,13 @@
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
         <param name="onload" value="true" />
     </feature>
+    <feature name="SSLCertificateChecker">
+        <param name="android-package" value="nl.xservices.plugins.SSLCertificateChecker" />
+    </feature>
+    <feature name="PrivacyScreenPlugin">
+        <param name="android-package" value="org.devgeeks.privacyscreen.PrivacyScreenPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <name>Xenios Wallet</name>
     <description>
         Official Web Wallet for Xenios coin.
@@ -72,4 +79,5 @@
     <preference name="loglevel" value="DEBUG" />
     <preference name="SplashMaintainAspectRatio" value="false" />
     <preference name="AutoHideSplashScreen" value="false" />
+    <preference name="KeepRunning" value="true" />
 </widget>

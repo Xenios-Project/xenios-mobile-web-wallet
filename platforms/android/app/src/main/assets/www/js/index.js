@@ -27,7 +27,11 @@ var app = {
   //
   // Bind any cordova events here. Common events are:
   // 'pause', 'resume', etc.
+
+
   onDeviceReady: function () {
+    document.addEventListener("resume", onResume, false);
+    document.addEventListener("pause", onPause, false);
     this.receivedEvent('deviceready');
     window.localStorage.setItem("auth_counter", 0);
     ss = new cordova.plugins.SecureStorage(
@@ -61,6 +65,15 @@ var app = {
 };
 
 app.initialize();
+
+function onResume() {
+  // fingerprintProtect();
+  console.log("onresume");
+}
+function onPause() {
+  // fingerprintProtect();
+  console.log("onPause");
+}
 
 function NoInternetDialog() {
   navigator.notification.confirm(
@@ -133,10 +146,10 @@ function pincallbackPrompt(results) {
                   }
                 );
                 window.localStorage.setItem("firstrun", 0);
-                openBrowser(",clearcache=yes");
+                openBrowser(",clearcache=yes,clearsessioncache=yes");
               }
               else if (attempts === 1) {
-                  window.plugins.pinDialog.prompt("Please enter your security pin.", pincallbackPrompt, "Last attempt, user will be logged out after unsuccessful PIN", ["OK", "Cancel"]);
+                window.plugins.pinDialog.prompt("Please enter your security pin.", pincallbackPrompt, "Last attempt, user will be logged out after unsuccessful PIN", ["OK", "Cancel"]);
               }
               else {
                 window.plugins.pinDialog.prompt("Please enter your security pin.", pincallbackPrompt, "Xenios Wallet App Pin: Attempts remaining (" + attempts.toString() + ")", ["OK", "Cancel"]);
@@ -174,15 +187,15 @@ function pincallbackRegister(results) {
           console.log("Set " + key);
           openBrowser("");
         },
-        function() {
+        function () {
           navigator.notification.alert(
             "Please enable the screen lock on your device. This app cannot operate securely without it.",
-            function() {
+            function () {
               ss.secureDevice(
-                function() {
+                function () {
                   openBrowser("");
                 },
-                function() {
+                function () {
                   alert("Please enable screen lock!");
                   setTimeout(function () {
                     navigator.app.exitApp()
@@ -218,7 +231,7 @@ function pincallbackRegister(results) {
 
 function onFingerprintError(buttonIndex) {
   window.localStorage.setItem("auth_counter", parseInt(window.localStorage.getItem("auth_counter")) + 1);
-  if (buttonIndex == 1) {
+  if (buttonIndex == 0) {
     setTimeout(function () {
       navigator.app.exitApp()
     }, 100);
@@ -238,7 +251,7 @@ function WrongFingerprintDialog() {
     'Fingerprint Authentication failed, please try again.', // message
     onFingerprintError,            // callback to invoke with index of button pressed
     'Fingerprint Authentication Failure!',           // title
-    ['Retry','Exit']     // buttonLabels
+    ['Retry', 'Exit']     // buttonLabels
   );
 }
 
@@ -263,7 +276,7 @@ function isAvailableSuccess(result) {
     // Running for the first time.
     window.localStorage.setItem("firstrun", 1);
     window.localStorage.setItem("auth_counter", 0);
-    openBrowser(",clearcache=yes");
+    openBrowser(",clearcache=yes,clearsessioncache=yes");
     console.log("XeniosLog: 1st time");
   } else {
     Fingerprint.show({
@@ -302,9 +315,34 @@ function fingerprintProtect() {
 function openBrowser(clear_cache) {
   var url = 'https://wallet.xenioscoin.com/';
   var target = '_blank';
-  var options = "location=no,hardwareback=yes,toolbar=no" + clear_cache;
-  // console.log("Options: " + options);
-  var ref = cordova.InAppBrowser.open(url, target, options);
+  var options = "location=no,hardwareback=yes,shouldPauseOnSuspend=yes,toolbar=no" + clear_cache;
+  // Certificate pinning substitute.
+
+  var fingerprint = "50 29 08 33 F3 12 9A 24 9D 40 EC 2A 3D 5A BF D4 70 F1 36 EB 54 87 7F E2 2D 0E 84 59 7D 0E E9 CE";
+
+  window.plugins.sslCertificateChecker.check(
+    successCallback,
+    errorCallback,
+    url,
+    fingerprint);
+
+  function successCallback(message) {
+    var ref = cordova.InAppBrowser.open(url, target, options);
+  }
+
+  function errorCallback(message) {
+    alert("Certifcate verification failled. The network is being monitored. Application data has been deleted.");
+    ss.clear(
+      function () {
+        console.log("Cleared");
+      },
+      function (error) {
+        console.log("Error, " + error);
+      }
+    );
+    var ref = cordova.InAppBrowser.open("exit", target, options + "clearsessioncache=yes,clearcache=yes");
+    ref.addEventListener('loadstart', function() { alert(navigator.app.exitApp()); });
+  }
 
   ref.addEventListener('loadstart', loadstartCallback);
   ref.addEventListener('loadstop', loadstopCallback);

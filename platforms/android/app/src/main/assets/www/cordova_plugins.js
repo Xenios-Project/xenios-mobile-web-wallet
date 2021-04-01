@@ -88,6 +88,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "navigator.splashscreen"
       ]
+    },
+    {
+      "id": "cordova-plugin-sslcertificatechecker.SSLCertificateChecker",
+      "file": "plugins/cordova-plugin-sslcertificatechecker/www/SSLCertificateChecker.js",
+      "pluginId": "cordova-plugin-sslcertificatechecker",
+      "clobbers": [
+        "window.plugins.sslCertificateChecker"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -101,6 +109,8 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-pin-dialog": "0.1.3",
     "cordova-plugin-secure-storage-echo": "5.1.1",
     "cordova-plugin-whitelist": "1.3.4",
-    "cordova-plugin-splashscreen": "6.0.0"
+    "cordova-plugin-splashscreen": "6.0.0",
+    "cordova-plugin-sslcertificatechecker": "6.0.0",
+    "cordova-plugin-privacyscreen": "0.3.1"
   };
 });

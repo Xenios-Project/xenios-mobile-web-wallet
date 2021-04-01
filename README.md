@@ -1,6 +1,6 @@
 # Xenios Coin Official Mobile Web Wallet
 
-The signed apk can be found [here](platforms/android/app/build/outputs/apk/release/app-release.apk)
+The signed apk can be found [here](./app-release.apk)
 
 ## Getting Started
 

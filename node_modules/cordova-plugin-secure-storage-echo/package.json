@@ -1,0 +1,96 @@
+{
+  "_from": "cordova-plugin-secure-storage-echo",
+  "_id": "cordova-plugin-secure-storage-echo@5.1.1",
+  "_inBundle": false,
+  "_integrity": "sha512-8TLY9ilM/K597vLKCEKwboJ0yjJqdlZAdc4GK67nqjaSbGOBso94uVNXQ6iAvrcXt+rnK1ZOFG3DI/n8S8aj/w==",
+  "_location": "/cordova-plugin-secure-storage-echo",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "cordova-plugin-secure-storage-echo",
+    "name": "cordova-plugin-secure-storage-echo",
+    "escapedName": "cordova-plugin-secure-storage-echo",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#DEV:/",
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/cordova-plugin-secure-storage-echo/-/cordova-plugin-secure-storage-echo-5.1.1.tgz",
+  "_shasum": "2d18419d2c05717ef5adb1433d5bc9f0c988b905",
+  "_spec": "cordova-plugin-secure-storage-echo",
+  "_where": "/home/consultant/Documents/ultimate-cordova-webview-app",
+  "author": {
+    "name": "Yiorgis Gozadinos",
+    "email": "ggozad@crypho.com"
+  },
+  "bugs": {
+    "url": "https://github.com/mibrito707/cordova-plugin-secure-storage-echo/issues"
+  },
+  "bundleDependencies": false,
+  "contributors": [
+    {
+      "name": "Demetris Manikas",
+      "email": "demetris.manikas@gmail.com"
+    },
+    {
+      "name": "Sergey Grebnov",
+      "email": "sergei.grebnov@gmail.com"
+    },
+    {
+      "name": "Ajay Ambre",
+      "email": "ajayambre88@gmail.com"
+    },
+    {
+      "name": "Maurys Brito",
+      "email": "mibrito@mibrito.com"
+    },
+    {
+      "name": "Aurelien RICHAUD",
+      "email": "aurelien.richaud@groupecen.com"
+    }
+  ],
+  "cordova": {
+    "id": "cordova-plugin-secure-storage-echo",
+    "platforms": [
+      "android",
+      "ios",
+      "wp8",
+      "windows"
+    ]
+  },
+  "deprecated": false,
+  "description": "Secure storage plugin for iOS & Android",
+  "devDependencies": {
+    "cordova-plugin-test-framework": ">=1.0.0",
+    "eslint": ""
+  },
+  "homepage": "https://github.com/mibrito707/cordova-plugin-secure-storage-echo#readme",
+  "keywords": [
+    "cordova",
+    "security",
+    "encryption",
+    "storage",
+    "secure",
+    "ecosystem:cordova",
+    "cordova-android",
+    "cordova-ios",
+    "cordova-wp8",
+    "cordova-windows",
+    "cordova-browser"
+  ],
+  "license": "MIT",
+  "main": "www/securestorage.js",
+  "name": "cordova-plugin-secure-storage-echo",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mibrito707/cordova-plugin-secure-storage-echo.git"
+  },
+  "scripts": {
+    "eslint": "eslint www/securestorage.js tests/tests.js"
+  },
+  "version": "5.1.1"
+}

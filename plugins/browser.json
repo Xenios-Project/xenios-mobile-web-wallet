@@ -1,0 +1,45 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-network-information": {
+      "PACKAGE_NAME": "com.example.hello"
+    },
+    "cordova-plugin-native-spinner": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-console": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-app-exit": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-dialogs": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-fingerprint-aio": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-pin-dialog": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-secure-storage-echo": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    }
+  },
+  "dependent_plugins": {}
+}

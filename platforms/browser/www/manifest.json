@@ -1,0 +1,11 @@
+{
+  "background_color": "#FFF",
+  "display": "standalone",
+  "name": "Xenios Wallet",
+  "short_name": "Xenios Wallet",
+  "version": "com.xenioscoin.wallet",
+  "description": "Official Web Wallet for Xenios coin.",
+  "author": "Xenios Group",
+  "icons": [],
+  "start_url": "index.html"
+}

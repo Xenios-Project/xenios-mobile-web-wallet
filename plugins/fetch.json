@@ -1,0 +1,90 @@
+{
+  "cordova-plugin-whitelist": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-whitelist@1"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-network-information": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-network-information@2.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-native-spinner": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-native-spinner"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-console": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-console"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-app-exit": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-app-exit@0.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-dialogs": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-dialogs@^2.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-fingerprint-aio": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-fingerprint-aio@4.0.2"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-pin-dialog": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-pin-dialog"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-secure-storage-echo": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-secure-storage-echo"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-inappbrowser": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-inappbrowser@5.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-splashscreen": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-splashscreen@6.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  }
+}

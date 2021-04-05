@@ -16,9 +16,6 @@
     "cordova-plugin-native-spinner": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
-    "cordova-plugin-console": {
-      "PACKAGE_NAME": "com.xenioscoin.wallet"
-    },
     "cordova-plugin-app-exit": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },

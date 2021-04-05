@@ -105,9 +105,6 @@
     "cordova-plugin-app-exit": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
-    "cordova-plugin-console": {
-      "PACKAGE_NAME": "com.xenioscoin.wallet"
-    },
     "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
@@ -244,7 +241,6 @@
   ],
   "plugin_metadata": {
     "cordova-plugin-app-exit": "0.0.1",
-    "cordova-plugin-console": "1.1.0",
     "cordova-plugin-dialogs": "2.0.2",
     "cordova-plugin-fingerprint-aio": "4.0.2",
     "cordova-plugin-inappbrowser": "5.0.0",

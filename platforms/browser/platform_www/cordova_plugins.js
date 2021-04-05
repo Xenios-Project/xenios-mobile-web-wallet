@@ -128,7 +128,6 @@ module.exports.metadata =
     "cordova-plugin-whitelist": "1.3.4",
     "cordova-plugin-network-information": "2.0.2",
     "cordova-plugin-native-spinner": "1.1.3",
-    "cordova-plugin-console": "1.1.0",
     "cordova-plugin-app-exit": "0.0.1",
     "cordova-plugin-dialogs": "2.0.2",
     "cordova-plugin-fingerprint-aio": "4.0.2",

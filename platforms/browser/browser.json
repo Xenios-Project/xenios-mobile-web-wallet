@@ -23,10 +23,10 @@
   },
   "installed_plugins": {
     "cordova-plugin-whitelist": {
-      "PACKAGE_NAME": "com.example.hello"
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
     "cordova-plugin-network-information": {
-      "PACKAGE_NAME": "com.example.hello"
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
     "cordova-plugin-native-spinner": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"

@@ -7,16 +7,23 @@
     "files": {}
   },
   "installed_plugins": {
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
     "cordova-plugin-app-exit": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-camera": {
+      "ANDROID_SUPPORT_V4_VERSION": "27.+",
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
     "cordova-plugin-dialogs": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
     "cordova-plugin-fingerprint-aio": {
-      "PACKAGE_NAME": "com.xenioscoin.wallet"
-    },
-    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
     "cordova-plugin-native-spinner": {
@@ -28,10 +35,10 @@
     "cordova-plugin-pin-dialog": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
-    "cordova-plugin-secure-storage-echo": {
+    "cordova-plugin-privacyscreen": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
-    "cordova-plugin-whitelist": {
+    "cordova-plugin-secure-storage-echo": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
     "cordova-plugin-splashscreen": {
@@ -40,7 +47,19 @@
     "cordova-plugin-sslcertificatechecker": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
-    "cordova-plugin-privacyscreen": {
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-safariviewcontroller": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     }
   },

@@ -31,9 +31,6 @@
     "cordova-plugin-secure-storage-echo": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
-    "cordova-plugin-inappbrowser": {
-      "PACKAGE_NAME": "com.xenioscoin.wallet"
-    },
     "cordova-plugin-splashscreen": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
@@ -41,6 +38,27 @@
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     },
     "cordova-plugin-privacyscreen": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-camera": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-androidx-adapter": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-android-permissions": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-media-capture": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-file": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-safariviewcontroller": {
+      "PACKAGE_NAME": "com.xenioscoin.wallet"
+    },
+    "cordova-plugin-inappbrowser": {
       "PACKAGE_NAME": "com.xenioscoin.wallet"
     }
   },

@@ -1,19 +1,16 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="com.xenioscoin.wallet" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <feature name="ExitApp">
-        <param name="android-package" value="org.apache.cordova.exitapp.ExitApp" />
+    <feature name="Permissions">
+        <param name="android-package" value="com.android.plugins.Permissions" />
     </feature>
-    <platform name="android">
-        <preference name="AndroidXEnabled" value="true" />
-    </platform>
+    <feature name="Camera">
+        <param name="android-package" value="org.apache.cordova.camera.CameraLauncher" />
+    </feature>
     <feature name="Notification">
         <param name="android-package" value="org.apache.cordova.dialogs.Notification" />
     </feature>
     <feature name="Fingerprint">
         <param name="android-package" value="de.niklasmerz.cordova.biometric.Fingerprint" />
-    </feature>
-    <feature name="InAppBrowser">
-        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
     </feature>
     <feature name="SpinnerDialog">
         <param name="android-package" value="com.greybax.spinnerdialog.SpinnerDialog" />
@@ -24,12 +21,12 @@
     <feature name="PinDialog">
         <param name="android-package" value="hu.dpal.phonegap.plugins.PinDialog" />
     </feature>
+    <feature name="PrivacyScreenPlugin">
+        <param name="android-package" value="org.devgeeks.privacyscreen.PrivacyScreenPlugin" />
+        <param name="onload" value="true" />
+    </feature>
     <feature name="SecureStorage">
         <param name="android-package" value="com.crypho.plugins.SecureStorage" />
-    </feature>
-    <feature name="Whitelist">
-        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
-        <param name="onload" value="true" />
     </feature>
     <feature name="SplashScreen">
         <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen" />
@@ -38,8 +35,29 @@
     <feature name="SSLCertificateChecker">
         <param name="android-package" value="nl.xservices.plugins.SSLCertificateChecker" />
     </feature>
-    <feature name="PrivacyScreenPlugin">
-        <param name="android-package" value="org.devgeeks.privacyscreen.PrivacyScreenPlugin" />
+    <feature name="Whitelist">
+        <param name="android-package" value="org.apache.cordova.whitelist.WhitelistPlugin" />
+        <param name="onload" value="true" />
+    </feature>
+    <feature name="File">
+        <param name="android-package" value="org.apache.cordova.file.FileUtils" />
+        <param name="onload" value="true" />
+    </feature>
+    <allow-navigation href="cdvfile:*" />
+    <feature name="Capture">
+        <param name="android-package" value="org.apache.cordova.mediacapture.Capture" />
+    </feature>
+    <feature name="InAppBrowser">
+        <param name="android-package" value="org.apache.cordova.inappbrowser.InAppBrowser" />
+    </feature>
+    <feature name="ExitApp">
+        <param name="android-package" value="org.apache.cordova.exitapp.ExitApp" />
+    </feature>
+    <platform name="android">
+        <preference name="AndroidXEnabled" value="true" />
+    </platform>
+    <feature name="SafariViewController">
+        <param name="android-package" value="com.customtabplugin.ChromeCustomTabPlugin" />
         <param name="onload" value="true" />
     </feature>
     <name>Xenios Wallet</name>

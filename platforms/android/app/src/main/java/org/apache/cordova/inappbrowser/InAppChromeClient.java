@@ -63,6 +63,7 @@ public class InAppChromeClient extends WebChromeClient {
         quotaUpdater.updateQuota(MAX_QUOTA);
     }
 
+
     /**
      * Instructs the client to show a prompt to ask the user to set the Geolocation permission state for the specified origin.
      *
@@ -74,7 +75,7 @@ public class InAppChromeClient extends WebChromeClient {
         super.onGeolocationPermissionsShowPrompt(origin, callback);
         callback.invoke(origin, true, false);
     }
-
+    
     /**
      * Tell the client to display a prompt dialog to the user.
      * If the client returns true, WebView will assume that the client will
@@ -179,4 +180,5 @@ public class InAppChromeClient extends WebChromeClient {
 
         return true;
     }
+    
 }

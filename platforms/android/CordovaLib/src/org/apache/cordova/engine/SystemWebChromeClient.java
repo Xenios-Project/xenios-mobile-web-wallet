@@ -259,10 +259,10 @@ public class SystemWebChromeClient extends WebChromeClient {
     }
 
     @Override
-    public void onPermissionRequest(final PermissionRequest request) {
-        LOG.d(LOG_TAG, "onPermissionRequest: " + Arrays.toString(request.getResources()));
-        request.grant(request.getResources());
-    }
+@TargetApi(Build.VERSION_CODES.LOLLIPOP)
+public void onPermissionRequest(PermissionRequest request) {
+request.grant(request.getResources());
+}
 
     public void destroyLastDialog(){
         dialogsHelper.destroyLastDialog();

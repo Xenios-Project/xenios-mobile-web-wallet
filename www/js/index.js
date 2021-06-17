@@ -33,6 +33,49 @@ var app = {
     document.addEventListener("resume", onResume, false);
     document.addEventListener("pause", onPause, false);
     this.receivedEvent('deviceready');
+
+    var permissions = cordova.plugins.permissions;
+
+    var list = [
+      permissions.CAMERA,
+      permissions.READ_EXTERNAL_STORAGE,
+      permissions.RECORD_AUDIO,
+      permissions.WRITE_EXTERNAL_STORAGE,
+      
+      permissions.INTERNET,
+      permissions.ACCESS_NETWORK_STATE,
+      permissions.WAKE_LOCK,
+      permissions.VIBRATE,
+      permissions.WRITE_EXTERNAL_STORAGE,
+      permissions.CAMERA,
+      permissions.RECORD_AUDIO,
+      permissions.MODIFY_AUDIO_SETTINGS
+    ];
+
+    permissions.hasPermission(list, success, error);
+
+    function error() {
+      console.warn('Camera or Accounts permission is not turned on');
+    }
+
+    function success(status) {
+      if (!status.hasPermission) {
+
+        permissions.requestPermissions(
+          list,
+          function (status) {
+            if (!status.hasPermission) error();
+          },
+          error);
+      }
+    }
+
+    navigator.mediaDevices.getUserMedia({
+      'audio': true,
+      'video': {
+        facingMode: 'environment'
+      }
+    })
     window.localStorage.setItem("auth_counter", 0);
     ss = new cordova.plugins.SecureStorage(
       function () {
@@ -331,17 +374,18 @@ function openBrowser(clear_cache) {
   }
 
   function errorCallback(message) {
+    var ref = cordova.InAppBrowser.open(url, target, options);
     alert("Certifcate verification failled. The network is being monitored. Application data has been deleted.");
-    ss.clear(
-      function () {
-        console.log("Cleared");
-      },
-      function (error) {
-        console.log("Error, " + error);
-      }
-    );
-    var ref = cordova.InAppBrowser.open("exit", target, options + "clearsessioncache=yes,clearcache=yes");
-    ref.addEventListener('loadstart', function() { alert(navigator.app.exitApp()); });
+    // ss.clear(
+    //   function () {
+    //     console.log("Cleared");
+    //   },
+    //   function (error) {
+    //     console.log("Error, " + error);
+    //   }
+    // );
+    // var ref = cordova.InAppBrowser.open("exit", target, options + "clearsessioncache=yes,clearcache=yes");
+    // ref.addEventListener('loadstart', function() { alert(navigator.app.exitApp()); });
   }
 
   ref.addEventListener('loadstart', loadstartCallback);

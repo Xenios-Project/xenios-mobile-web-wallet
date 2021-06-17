@@ -27,7 +27,6 @@
       "cordova-plugin-pin-dialog": {},
       "cordova-plugin-secure-storage-echo": {},
       "cordova-plugin-splashscreen": {},
-      "cordova-plugin-sslcertificatechecker": {},
       "cordova-plugin-privacyscreen": {},
       "cordova-plugin-camera": {},
       "cordova-plugin-androidx-adapter": {},
@@ -35,7 +34,8 @@
       "cordova-plugin-media-capture": {},
       "cordova-plugin-file": {},
       "cordova-plugin-safariviewcontroller": {},
-      "cordova-plugin-inappbrowser": {}
+      "cordova-plugin-inappbrowser": {},
+      "cordova-plugin-sslcertificatechecker": {}
     },
     "platforms": [
       "browser",

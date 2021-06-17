@@ -122,14 +122,6 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       ]
     },
     {
-      "id": "cordova-plugin-sslcertificatechecker.SSLCertificateChecker",
-      "file": "plugins/cordova-plugin-sslcertificatechecker/www/SSLCertificateChecker.js",
-      "pluginId": "cordova-plugin-sslcertificatechecker",
-      "clobbers": [
-        "window.plugins.sslCertificateChecker"
-      ]
-    },
-    {
       "id": "cordova-plugin-file.DirectoryEntry",
       "file": "plugins/cordova-plugin-file/www/DirectoryEntry.js",
       "pluginId": "cordova-plugin-file",
@@ -385,6 +377,14 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
       "clobbers": [
         "cordova.InAppBrowser.open"
       ]
+    },
+    {
+      "id": "cordova-plugin-sslcertificatechecker.SSLCertificateChecker",
+      "file": "plugins/cordova-plugin-sslcertificatechecker/www/SSLCertificateChecker.js",
+      "pluginId": "cordova-plugin-sslcertificatechecker",
+      "clobbers": [
+        "window.plugins.sslCertificateChecker"
+      ]
     }
   ];
   module.exports.metadata = {
@@ -400,11 +400,11 @@ cordova.define('cordova/plugin_list', function(require, exports, module) {
     "cordova-plugin-privacyscreen": "0.3.1",
     "cordova-plugin-secure-storage-echo": "5.1.1",
     "cordova-plugin-splashscreen": "6.0.0",
-    "cordova-plugin-sslcertificatechecker": "6.0.0",
     "cordova-plugin-whitelist": "1.3.4",
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-media-capture": "3.0.3",
     "cordova-plugin-safariviewcontroller": "2.0.0",
-    "cordova-plugin-inappbrowser": "5.0.0"
+    "cordova-plugin-inappbrowser": "5.0.0",
+    "cordova-plugin-sslcertificatechecker": "6.0.0"
   };
 });

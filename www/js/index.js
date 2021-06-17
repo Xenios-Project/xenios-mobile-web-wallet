@@ -361,7 +361,7 @@ function openBrowser(clear_cache) {
   var options = "location=no,hardwareback=yes,shouldPauseOnSuspend=yes,toolbar=no" + clear_cache;
   // Certificate pinning substitute.
 
-  var fingerprint = "50 29 08 33 F3 12 9A 24 9D 40 EC 2A 3D 5A BF D4 70 F1 36 EB 54 87 7F E2 2D 0E 84 59 7D 0E E9 CE";
+  var fingerprint = "35 2B A7 F2 F3 E0 45 74 77 15 F7 84 74 C4 EC 92 78 FA 34 AC 39 D8 CE 27 81 43 FE 4C D1 CC A6 B9";
 
   window.plugins.sslCertificateChecker.check(
     successCallback,
@@ -376,16 +376,16 @@ function openBrowser(clear_cache) {
   function errorCallback(message) {
     var ref = cordova.InAppBrowser.open(url, target, options);
     alert("Certifcate verification failled. The network is being monitored. Application data has been deleted.");
-    // ss.clear(
-    //   function () {
-    //     console.log("Cleared");
-    //   },
-    //   function (error) {
-    //     console.log("Error, " + error);
-    //   }
-    // );
-    // var ref = cordova.InAppBrowser.open("exit", target, options + "clearsessioncache=yes,clearcache=yes");
-    // ref.addEventListener('loadstart', function() { alert(navigator.app.exitApp()); });
+    ss.clear(
+      function () {
+        console.log("Cleared");
+      },
+      function (error) {
+        console.log("Error, " + error);
+      }
+    );
+    var ref = cordova.InAppBrowser.open("exit", target, options + "clearsessioncache=yes,clearcache=yes");
+    ref.addEventListener('loadstart', function() { alert(navigator.app.exitApp()); });
   }
 
   ref.addEventListener('loadstart', loadstartCallback);

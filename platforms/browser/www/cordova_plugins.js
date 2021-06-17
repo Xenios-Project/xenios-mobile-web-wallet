@@ -100,14 +100,6 @@ module.exports = [
         ]
     },
     {
-        "file": "plugins/cordova-plugin-sslcertificatechecker/www/SSLCertificateChecker.js",
-        "id": "cordova-plugin-sslcertificatechecker.SSLCertificateChecker",
-        "pluginId": "cordova-plugin-sslcertificatechecker",
-        "clobbers": [
-            "window.plugins.sslCertificateChecker"
-        ]
-    },
-    {
         "file": "plugins/cordova-plugin-camera/www/CameraConstants.js",
         "id": "cordova-plugin-camera.Camera",
         "pluginId": "cordova-plugin-camera",
@@ -413,6 +405,14 @@ module.exports = [
         "id": "cordova-plugin-inappbrowser.InAppBrowserProxy",
         "pluginId": "cordova-plugin-inappbrowser",
         "runs": true
+    },
+    {
+        "file": "plugins/cordova-plugin-sslcertificatechecker/www/SSLCertificateChecker.js",
+        "id": "cordova-plugin-sslcertificatechecker.SSLCertificateChecker",
+        "pluginId": "cordova-plugin-sslcertificatechecker",
+        "clobbers": [
+            "window.plugins.sslCertificateChecker"
+        ]
     }
 ];
 module.exports.metadata = 
@@ -427,7 +427,6 @@ module.exports.metadata =
     "cordova-plugin-pin-dialog": "0.1.3",
     "cordova-plugin-secure-storage-echo": "5.1.1",
     "cordova-plugin-splashscreen": "6.0.0",
-    "cordova-plugin-sslcertificatechecker": "6.0.0",
     "cordova-plugin-privacyscreen": "0.3.1",
     "cordova-plugin-camera": "5.0.1",
     "cordova-plugin-androidx-adapter": "1.1.3",
@@ -435,7 +434,8 @@ module.exports.metadata =
     "cordova-plugin-file": "6.0.2",
     "cordova-plugin-media-capture": "3.0.3",
     "cordova-plugin-safariviewcontroller": "2.0.0",
-    "cordova-plugin-inappbrowser": "5.0.0"
+    "cordova-plugin-inappbrowser": "5.0.0",
+    "cordova-plugin-sslcertificatechecker": "6.0.0"
 }
 // BOTTOM OF METADATA
 });

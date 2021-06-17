@@ -71,14 +71,6 @@
     "is_top_level": true,
     "variables": {}
   },
-  "cordova-plugin-sslcertificatechecker": {
-    "source": {
-      "type": "registry",
-      "id": "cordova-plugin-sslcertificatechecker"
-    },
-    "is_top_level": true,
-    "variables": {}
-  },
   "cordova-plugin-privacyscreen": {
     "source": {
       "type": "registry",
@@ -139,6 +131,14 @@
     "source": {
       "type": "registry",
       "id": "cordova-plugin-inappbrowser@5.0.0"
+    },
+    "is_top_level": true,
+    "variables": {}
+  },
+  "cordova-plugin-sslcertificatechecker": {
+    "source": {
+      "type": "registry",
+      "id": "cordova-plugin-sslcertificatechecker"
     },
     "is_top_level": true,
     "variables": {}

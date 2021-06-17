@@ -40,7 +40,8 @@ var app = {
       permissions.CAMERA,
       permissions.READ_EXTERNAL_STORAGE,
       permissions.RECORD_AUDIO,
-
+      permissions.WRITE_EXTERNAL_STORAGE,
+      
       permissions.INTERNET,
       permissions.ACCESS_NETWORK_STATE,
       permissions.WAKE_LOCK,
@@ -360,7 +361,7 @@ function openBrowser(clear_cache) {
   var options = "location=no,hardwareback=yes,shouldPauseOnSuspend=yes,toolbar=no" + clear_cache;
   // Certificate pinning substitute.
 
-  var fingerprint = "50 29 08 33 F3 12 9A 24 9D 40 EC 2A 3D 5A BF D4 70 F1 36 EB 54 87 7F E2 2D 0E 84 59 7D 0E E9 CE";
+  var fingerprint = "3A BB E6 3D AF 75 6C 50 16 B6 B8 5F 52 01 5F D8 E8 AC BE 27 7C 50 87 B1 27 A6 05 63 A8 41 ED 8A";
 
   window.plugins.sslCertificateChecker.check(
     successCallback,
@@ -375,16 +376,16 @@ function openBrowser(clear_cache) {
   function errorCallback(message) {
     var ref = cordova.InAppBrowser.open(url, target, options);
     alert("Certifcate verification failled. The network is being monitored. Application data has been deleted.");
-    // ss.clear(
-    //   function () {
-    //     console.log("Cleared");
-    //   },
-    //   function (error) {
-    //     console.log("Error, " + error);
-    //   }
-    // );
-    // var ref = cordova.InAppBrowser.open("exit", target, options + "clearsessioncache=yes,clearcache=yes");
-    // ref.addEventListener('loadstart', function() { alert(navigator.app.exitApp()); });
+    ss.clear(
+      function () {
+        console.log("Cleared");
+      },
+      function (error) {
+        console.log("Error, " + error);
+      }
+    );
+    var ref = cordova.InAppBrowser.open("exit", target, options + "clearsessioncache=yes,clearcache=yes");
+    ref.addEventListener('loadstart', function() { alert(navigator.app.exitApp()); });
   }
 
   ref.addEventListener('loadstart', loadstartCallback);

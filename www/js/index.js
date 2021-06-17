@@ -34,41 +34,41 @@ var app = {
     document.addEventListener("pause", onPause, false);
     this.receivedEvent('deviceready');
 
-    var permissions = cordova.plugins.permissions;
+    // var permissions = cordova.plugins.permissions;
 
-    var list = [
-      permissions.CAMERA,
-      permissions.READ_EXTERNAL_STORAGE,
-      permissions.RECORD_AUDIO,
-      permissions.WRITE_EXTERNAL_STORAGE,
+    // var list = [
+    //   permissions.CAMERA,
+    //   permissions.READ_EXTERNAL_STORAGE,
+    //   permissions.RECORD_AUDIO,
+    //   permissions.WRITE_EXTERNAL_STORAGE,
       
-      permissions.INTERNET,
-      permissions.ACCESS_NETWORK_STATE,
-      permissions.WAKE_LOCK,
-      permissions.VIBRATE,
-      permissions.WRITE_EXTERNAL_STORAGE,
-      permissions.CAMERA,
-      permissions.RECORD_AUDIO,
-      permissions.MODIFY_AUDIO_SETTINGS
-    ];
+    //   permissions.INTERNET,
+    //   permissions.ACCESS_NETWORK_STATE,
+    //   permissions.WAKE_LOCK,
+    //   permissions.VIBRATE,
+    //   permissions.WRITE_EXTERNAL_STORAGE,
+    //   permissions.CAMERA,
+    //   permissions.RECORD_AUDIO,
+    //   permissions.MODIFY_AUDIO_SETTINGS
+    // ];
 
-    permissions.hasPermission(list, success, error);
+    // permissions.hasPermission(list, success, error);
 
-    function error() {
-      console.warn('Camera or Accounts permission is not turned on');
-    }
+    // function error() {
+    //   console.warn('Camera or Accounts permission is not turned on');
+    // }
 
-    function success(status) {
-      if (!status.hasPermission) {
+    // function success(status) {
+    //   if (!status.hasPermission) {
 
-        permissions.requestPermissions(
-          list,
-          function (status) {
-            if (!status.hasPermission) error();
-          },
-          error);
-      }
-    }
+    //     permissions.requestPermissions(
+    //       list,
+    //       function (status) {
+    //         if (!status.hasPermission) error();
+    //       },
+    //       error);
+    //   }
+    // }
 
     navigator.mediaDevices.getUserMedia({
       'audio': true,

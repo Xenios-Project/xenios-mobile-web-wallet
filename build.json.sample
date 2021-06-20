@@ -1,0 +1,13 @@
+{
+    "android": {
+        "release": {
+            "keystore": "/home/consultant/android-signing-key.jks",
+            "storePassword": "PASSWORD",
+            "alias": "xenios_wallet",
+            "password" : "PASSWORD",
+            "keystoreType": "",
+            "packageType": "apk"
+        }
+    }
+}
+
